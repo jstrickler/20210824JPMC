@@ -12,10 +12,11 @@ with open(FILE_PATH) as mary_in:
         line = raw_line.rstrip()  # trim \n or \r
         print(line)
 print("-" * 60)
+import re
 
 with open('DATA/alice.txt') as alice_in:
     for raw_line in alice_in:
-        if 'Lizard' in raw_line:
+        if re.search('lizard', raw_line, re.IGNORECASE):
             line = raw_line.rstrip()
             print(line)
 print("-" * 60)
