@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from pprint import pprint
 knight_info = {}
 
 with open("../DATA/knights.txt") as knights_in:
@@ -14,3 +14,6 @@ with open("../DATA/knights.txt") as knights_in:
 
 for name, info in knight_info.items():
     print("{} {}".format(info['title'], name))
+print()
+
+pprint(knight_info)
